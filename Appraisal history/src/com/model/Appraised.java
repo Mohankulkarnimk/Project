@@ -54,6 +54,5 @@ public String getNewrole() {
 public void setNewrole(String newrole) {
 	this.newrole = newrole;
 }
-
 } 
  

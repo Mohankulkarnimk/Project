@@ -14,10 +14,13 @@ public class DBconnect {
 		java.sql.Connection con=null;
 		try {
 			con=DriverManager.getConnection(url,username, password);
+			//System.out.println("connection established");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return con;
 	}
+	
+	
 }
