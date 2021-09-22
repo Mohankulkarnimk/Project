@@ -32,14 +32,15 @@ public class RoleDaoImp implements RoleDao {
 	}
 
 	@Override
-	public boolean deleteRole(int eid) {
+	public boolean deleteRole(int rid) {
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
 		try(Connection con=DBconnect.getConnection();
-			PreparedStatement pst=con.prepareStatement("delete  from role   where roleid=?"))
+			PreparedStatement pst=con.prepareStatement("delete  from role  where roleid=?"))
 			{
-			  pst.setInt(1, eid);
+			  pst.setInt(1, rid);
 			  pst.executeUpdate();
+			  return true;
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -47,40 +48,9 @@ public class RoleDaoImp implements RoleDao {
 		return false;
 	}
 
-	@Override
-	public List<Role> getALLEmp() {
-		// TODO Auto-generated method stub
-		try(Connection con=DBconnect.getConnection();
-				PreparedStatement pst=con.prepareStatement("select *  from role"))
-				{
-			      ArrayList<Role> rolelist =new ArrayList<Role>();
-			      ResultSet  rs = pst.executeQuery();
-			      while(rs.next())
-			      {
-			    	Role r =new Role();
-			    	r.setRoleid(rs.getInt(1));
-			    	r.setRolename(rs.getString(2));
-			    	 
-			      }
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-		return null;
-	}
+	
 
-	@Override
-	public boolean updateByName(int id) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Employee getEmpByID(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	@Override
 	public boolean updateRole(Role r) {
 		
@@ -98,6 +68,24 @@ public class RoleDaoImp implements RoleDao {
 
 	@Override
 	public List<Role> getALLRoles() {
+		try(Connection con=DBconnect.getConnection();
+				PreparedStatement pst=con.prepareStatement("select *  from role"))
+				{
+			      ArrayList<Role> rolelist =new ArrayList<Role>();
+			      ResultSet  rs = pst.executeQuery();
+			      while(rs.next())
+			      {
+			    	Role r =new Role();
+			    	r.setRoleid(rs.getInt(1));
+			    	r.setRolename(rs.getString(2));
+			    	rolelist.add(r);
+			    	 
+			      }
+			      return rolelist;
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		// TODO Auto-generated method stub
 		return null;
 	}

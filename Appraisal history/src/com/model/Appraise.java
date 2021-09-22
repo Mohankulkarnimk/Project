@@ -1,13 +1,13 @@
 package com.model;
 
-public class Appraised {
+public class Appraise {
   private int  empid;
   private int appraisaldate ;
   private String currentrole;
   private String newrole;
   
   
-public Appraised(int empid, int appraisaldate, String currentrole, String newrole) {
+public Appraise(int empid, int appraisaldate, String currentrole, String newrole) {
 	super();
 	this.empid = empid;
 	this.appraisaldate = appraisaldate;
