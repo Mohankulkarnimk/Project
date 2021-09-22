@@ -3,11 +3,24 @@ package com.model;
 public class Role {
 	private int roleid;
 	private String rolename;
+	
+	
 	public Role(int roleid, String rolename) {
 		super();
 		this.roleid = roleid;
 		this.rolename = rolename;
 	}
+	
+	
+	
+
+	public Role() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
 	public int getRoleid() {
 		return roleid;
 	}

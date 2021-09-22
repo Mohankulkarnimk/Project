@@ -8,10 +8,12 @@ import com.model.Role;
 
 public interface RoleDao {
 	public  boolean addRole(Role r);
+	public boolean updateRole(Role r); 
 	public  boolean deleteRole(int eid);
-	public List<Employee> getALLEmp();
+	public List<Role> getALLEmp();
 	public boolean  updateByName(int id);
 	public Employee getEmpByID( int id );
+	public List<Role> getALLRoles();
 	
 	 
 
