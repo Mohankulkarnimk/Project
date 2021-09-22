@@ -2,12 +2,12 @@ package com.model;
 
 public class Appraise {
   private int  empid;
-  private int appraisaldate ;
+  private String appraisaldate ;
   private String currentrole;
   private String newrole;
   
   
-public Appraise(int empid, int appraisaldate, String currentrole, String newrole) {
+public Appraise(int empid, String appraisaldate, String currentrole, String newrole) {
 	super();
 	this.empid = empid;
 	this.appraisaldate = appraisaldate;
@@ -26,12 +26,12 @@ public void setEmpid(int empid) {
 }
 
 
-public int getAppraisaldate() {
+public String getAppraisaldate() {
 	return appraisaldate;
 }
 
 
-public void setAppraisaldate(int appraisaldate) {
+public void setAppraisaldate(String appraisaldate) {
 	this.appraisaldate = appraisaldate;
 }
 

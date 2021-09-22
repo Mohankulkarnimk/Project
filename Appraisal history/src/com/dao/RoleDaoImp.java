@@ -58,7 +58,9 @@ public class RoleDaoImp implements RoleDao {
 		try(Connection con=DBconnect.getConnection();
 			PreparedStatement pst=con.prepareStatement("update role  set rolename=? where roleid=?"))
 		{
-			 
+			 pst.setLong(1,r.getRoleid());
+			 pst.setInt(2, r.getRoleid());
+			 return true;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

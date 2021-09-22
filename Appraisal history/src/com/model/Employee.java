@@ -1,7 +1,7 @@
 package com.model;
 
 public class Employee {
-	private String empid;
+	private int empid;
 	private String name;
 	private String email;
 	private long mobile;
@@ -9,7 +9,7 @@ public class Employee {
 	private int roleid;
 
 	
-	public Employee(String empid, String name, String email, long mobile, int deptid, int roleid) {
+	public Employee(int empid, String name, String email, long mobile, int deptid, int roleid) {
 		super();
 		this.empid = empid;
 		this.name = name;
@@ -22,14 +22,14 @@ public class Employee {
 	
 
 
-	public String getEmpid() {
+	public int getEmpid() {
 		return empid;
 	}
 
 
 
 
-	public void setEmpid(String empid) {
+	public void setEmpid(int empid) {
 		this.empid = empid;
 	}
 
