@@ -7,9 +7,10 @@ public class Employee {
 	private long mobile;
 	private int deptid;
 	private int roleid;
+	private int salary;
 
 	
-	public Employee(int empid, String name, String email, long mobile, int deptid, int roleid) {
+	public Employee(int empid, String name, String email, long mobile, int deptid, int salary,int roleid) {
 		super();
 		this.empid = empid;
 		this.name = name;
@@ -17,9 +18,35 @@ public class Employee {
 		this.mobile = mobile;
 		this.deptid = deptid;
 		this.roleid = roleid;
+		this.salary = salary;
 	}
+
+
+
+
+
 	
-	
+
+
+	public int getSalary() {
+		return salary;
+	}
+
+
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+
+
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 
 	public int getEmpid() {

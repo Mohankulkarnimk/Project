@@ -7,6 +7,11 @@ public class Appraise {
   private String newrole;
   
   
+public Appraise() {
+	super();
+}
+
+
 public Appraise(int empid, String appraisaldate, String currentrole, String newrole) {
 	super();
 	this.empid = empid;
